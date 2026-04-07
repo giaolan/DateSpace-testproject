@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.verification.mapper.TokenhistoryMapper">
+
+    <resultMap id="BaseResultMap" type="com.verification.domain.Tokenhistory">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="userid" column="userId" jdbcType="BIGINT"/>
+            <result property="issuccess" column="isSuccess" jdbcType="INTEGER"/>
+            <result property="time" column="time" jdbcType="TIMESTAMP"/>
+            <result property="tokenid" column="tokenId" jdbcType="BIGINT"/>
+            <result property="msg" column="msg" jdbcType="VARCHAR"/>
+            <result property="type" column="type" jdbcType="VARCHAR"/>
+            <result property="isupdate" column="isUpdate" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,userId,isSuccess,
+        time,tokenId,msg,
+        type,isUpdate
+    </sql>
+</mapper>

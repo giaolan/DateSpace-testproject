@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.verification.mapper.TradehistoryMapper">
+
+    <resultMap id="BaseResultMap" type="com.verification.domain.Tradehistory">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="tradeid" column="tradeId" jdbcType="BIGINT"/>
+            <result property="buyerid" column="buyerId" jdbcType="BIGINT"/>
+            <result property="time" column="time" jdbcType="TIMESTAMP"/>
+            <result property="sellerid" column="sellerId" jdbcType="BIGINT"/>
+            <result property="hash" column="hash" jdbcType="VARCHAR"/>
+            <result property="isdelete" column="isDelete" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,tradeId,buyerId,
+        time,sellerId,hash,
+        isDelete
+    </sql>
+</mapper>
